@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notifications-api
+  namespace: shop
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: notifications-api
+  template:
+    metadata:
+      labels:
+        app: notifications-api
+    spec:
+      containers:
+        - name: notifications-api
+          image: dannelysbeth/notifications-api:1.0.0
+          ports:
+            - containerPort: 5001
+          env:
+            - name: RABBITMQ_HOST
+              value: rabbitmq
+            - name: RABBITMQ_PORT
+              value: "5672"
+            - name: RABBITMQ_QUEUE_NAME
+              value: store-app-queue
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: notifications-api
+  namespace: shop
+spec:
+  ports:
+    - port: 5001
+      targetPort: 5001
+  selector:
+    app: notifications-api
