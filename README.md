@@ -1,1 +1,15 @@
 Completed part 1/2 final project
+
+
+# Store App on Kubernetes
+
+This repository contains a simple store application with multiple components orchestrated with Kubernetes.  
+The app consists of:
+- **Frontend** (store-front)
+- **Products API**
+- **Notifications API**
+- **MySQL Database**
+- **RabbitMQ (message broker)**
+
+---
+
