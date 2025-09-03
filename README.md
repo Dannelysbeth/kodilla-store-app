@@ -1,4 +1,4 @@
-Completed part 1/2 final project
+Completed part 2/2 final project
 
 
 # Store App on Kubernetes
