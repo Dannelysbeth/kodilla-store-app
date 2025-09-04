@@ -1,5 +1,7 @@
 Completed part 2/2 final project
 
+Project created for kodilla course
+
 
 # Store App on Kubernetes
 
