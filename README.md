@@ -1,6 +1,6 @@
 Completed part 2/2 final project
 
-Project created for kodilla course
+Project created for kodilla Docker and Kubernates course
 
 
 # Store App on Kubernetes
